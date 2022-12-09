@@ -1,0 +1,24 @@
+{
+  "name": "grpc-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server/index.ts --watch src/server",
+    "start:client": "nodemon src/client/index.ts --watch src/client",
+    "proto:build": "cd proto; buf build; cd ..",
+    "codegen:buf": "cd proto; buf generate; cd .."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grpc_tools_node_protoc_ts": "^5.3.2",
+    "grpc-tools": "^1.12.3",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "ts-node": "^10.9.1"
+  }
+}
